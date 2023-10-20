@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs Classes in JS</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        class Cars {
+        constructor(name, maker, price) {
+        this.name = name;
+        this.maker = maker;
+        this.price = price;
+        }
+        }
+        let car1 = new Cars('Rolls Royce Ghost', 'Rolls Royce', '$315K');
+        
+        document.writeln("Car Model -<b>"+car1.name+"</b>, Brand Name - <b>"+car1.maker+"</b> and Car Price -<b>"+car1.price+"</b>");
+
+    </script>
+</body>
+</html>

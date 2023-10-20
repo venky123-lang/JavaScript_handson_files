@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs Encapsulation in JS</title>
+</head>
+<body>
+    <script>
+        class Emp_details{
+        constructor(name,id){
+        this.name = name;
+        this.id = id;
+        }
+        add_Address(add){
+        this.add = add;
+        }
+        getDetails(){
+        document.write(`Employee Name: ${this.name}, Address: ${this.add}`);
+        }
+        }
+        let person1 = new Emp_details('Anand',27);
+        person1.add_Address('Bangalore');
+        person1.getDetails();
+
+    </script>
+</body>
+</html>

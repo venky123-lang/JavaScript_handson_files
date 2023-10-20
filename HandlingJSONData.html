@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX JSON Data</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="get-json">Get JSON</button>
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#get-json").click(function () {
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/posts/1", // Example URL
+                    method: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        $("#result").html("Title: " + data.title);
+                    },
+                    error: function (error) {
+                        console.error("Error:", error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

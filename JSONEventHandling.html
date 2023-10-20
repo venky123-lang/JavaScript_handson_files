@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Event Handling</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="myButton">Click me</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#myButton").click(function() {
+                alert("Button clicked!");
+            });
+
+            $("#myButton").mouseenter(function() {
+                $(this).css("background-color", "lightblue");
+            });
+
+            $("#myButton").mouseleave(function() {
+                $(this).css("background-color", "");
+            });
+        });
+    </script>
+</body>
+</html>

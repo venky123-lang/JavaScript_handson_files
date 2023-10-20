@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Tooltip</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+        .tooltip-text {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            top: -30px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <br />
+    <br />
+    <div class="tooltip">
+        Hover over me for a tooltip
+        <div class="tooltip-text">This is a tooltip.</div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".tooltip").hover(function() {
+                $(this).find(".tooltip-text").fadeIn();
+            }, function() {
+                $(this).find(".tooltip-text").fadeOut();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX POST Request</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="post-data">Post Data</button>
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#post-data").click(function () {
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/posts",
+                    method: "POST",
+                    data: JSON.stringify({ title: "New Post" }),
+                    contentType: "application/json",
+                    success: function (data) {
+                        $("#result").html("New Post ID: " + data.id);
+                    },
+                    error: function (error) {
+                        console.error("Error:", error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
